@@ -1,6 +1,7 @@
 import styles from "../components/sidebar.module.css"
 import Logo from "./Logo"
 import AppNav from "../components/AppNav"
+import { Outlet } from "react-router-dom"
 
 function Sidebar() {
     return (
@@ -8,10 +9,14 @@ function Sidebar() {
         <Logo/>
         <AppNav/>
 
-        <p>List of cities</p>
+
+
+        <Outlet/>
+
 
         <footer className={styles.footer}> 
-            <p>&copy; Copyright {new Date().getFullYear()}</p>
+            <p className={styles.copyright}>
+            &copy; Copyright {new Date().getFullYear()} by Oakren Inc.</p>
         </footer>
             
         </div>
